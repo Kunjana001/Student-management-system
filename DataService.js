@@ -6,7 +6,7 @@
    CONNECTION FIX - WHY THIS FILE WAS ADDED
    ----------------------------------------------------------
 
-   Every page (login.html, dashboard.html, studentList.html,
+   Every page (index.html (login page), dashboard.html, studentList.html,
    categoryList.html, sectionList.html, resultList.html,
    profile.html, settings.html, signup.html) already had a
    <script src=".../DataService.js"> tag, and every entity

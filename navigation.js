@@ -21,7 +21,9 @@
                                       sectionList.html,
                                       studentList.html
 
-       www4/addedFiles/html/      -> dashboard.html, login.html,
+       www4/addedFiles/html/      -> dashboard.html, index.html
+                                      (login page, renamed from
+                                      login.html),
                                       profile.html, settings.html,
                                       signup.html
 
@@ -106,12 +108,13 @@ function resolvePageUrl(strRelativePath)
 /* ==========================================================
    Go To Login Page
 
-   Real file: www4/addedFiles/html/login.html
+   Real file: www4/addedFiles/html/index.html (renamed from
+   login.html so it can serve as the site's landing page).
    ========================================================== */
 
 function goLogin()
 {
-    window.location.href = resolvePageUrl("../html/login.html");
+    window.location.href = resolvePageUrl("../html/index.html");
 }
 
 

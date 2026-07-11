@@ -81,7 +81,7 @@ function checkLoginStatus()
 {
     if (localStorage.getItem("loggedIn") !== "true")
     {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 }
 
@@ -151,6 +151,6 @@ function logoutUser()
         localStorage.removeItem("loggedIn");
         localStorage.removeItem("username");
 
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 }

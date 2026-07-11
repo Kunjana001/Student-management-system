@@ -1,0 +1,448 @@
+/* ==========================================
+   Student Management System
+   Dashboard Style Sheet
+   ========================================== */
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-page-background);
+}
+
+/* ---------- Main Layout ---------- */
+
+.dashboard {
+
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+
+    width: 260px;
+    background: var(--color-sidebar-background);
+    color: var(--color-sidebar-text);
+    transition: 0.3s;
+}
+
+.logo {
+
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.logo img {
+
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* ---------- Menu ---------- */
+
+.menu {
+
+    list-style: none;
+    margin-top: 20px;
+}
+
+.menu li {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu li i {
+
+    font-size: 16px;
+}
+
+.menu li span {
+
+    font-size: 15px;
+}
+
+.menu li:hover {
+
+    background: var(--color-sidebar-hover);
+}
+
+.menu .active {
+
+    background: var(--color-sidebar-hover);
+}
+
+/* ---------- Colored Icon Backgrounds ----------
+   Each nav item gets its own small rounded-square icon
+   background so it's easy to identify at a glance, especially
+   on mobile where the sidebar is a full-height overlay. Colors
+   are fixed per item (not theme-driven) so they stay
+   recognizable no matter which color theme is active. */
+
+.menu-icon-bg {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+    flex: none;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.menu-icon-blue   { background: #2f6fed; }
+.menu-icon-green  { background: #2e9e5b; }
+.menu-icon-purple { background: #8e44ec; }
+.menu-icon-orange { background: #f0883e; }
+.menu-icon-red    { background: #e5484d; }
+.menu-icon-cyan   { background: #17a5b8; }
+.menu-icon-gray   { background: #6b7280; }
+.menu-icon-pink   { background: #ec4899; }
+
+#logout {
+
+    color: #ffe0e0;
+}
+
+/* ---------- Main ---------- */
+
+.main {
+
+    flex: 1;
+    padding: 30px;
+}
+
+/* ---------- Top Bar ---------- */
+
+.topbar {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#menuBtn {
+
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.topbar h1 {
+
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.topbar p {
+
+    color: gray;
+}
+
+/* ---------- Search ---------- */
+
+.search-box {
+
+    display: flex;
+
+    margin-top: 20px;
+
+    margin-bottom: 25px;
+}
+
+.search-box input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 8px 0 0 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.search-box button {
+
+    width: 60px;
+
+    border: none;
+
+    background: var(--color-text-primary);
+
+    color: white;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+}
+
+/* ---------- Dashboard Cards ---------- */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+
+    background: var(--color-surface);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0px 5px 15px rgba(0,0,0,.12);
+
+    cursor: pointer;
+
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow: 0px 14px 24px rgba(0,0,0,.18);
+}
+
+.card i {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 16px;
+
+    font-size: 28px;
+
+    color: #ffffff;
+
+    margin-bottom: 18px;
+
+    transition: transform .25s ease;
+}
+
+.card:hover i {
+
+    transform: scale(1.08);
+}
+
+#studentCard i  { background: #2e9e5b; }
+#categoryCard i { background: #8e44ec; }
+#sectionCard i  { background: #f0883e; }
+#resultCard i   { background: #e5484d; }
+
+.card h3 {
+
+    color: var(--color-text-primary);
+
+    margin-bottom: 10px;
+}
+
+.card p {
+
+    color: var(--color-text-secondary);
+
+    font-size: 14px;
+}
+
+.card-count {
+
+    color: #1f3c88 !important;
+
+    font-weight: 700;
+
+    font-size: 15px !important;
+
+    margin-bottom: 4px;
+}
+
+/* ---------- Quick Stats / Recent Activity Panels ---------- */
+
+.panel {
+
+    background: var(--color-surface);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    box-shadow: 0px 5px 15px rgba(0,0,0,.08);
+}
+
+.panel-title {
+
+    color: var(--color-text-primary);
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+}
+
+.quick-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+    gap: 15px;
+}
+
+.stat-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background: var(--color-page-background);
+
+    border-radius: 10px;
+
+    padding: 15px 10px;
+}
+
+.stat-value {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #1f3c88;
+}
+
+.stat-label {
+
+    font-size: 13px;
+
+    color: var(--color-text-secondary);
+
+    margin-top: 4px;
+}
+
+.activity-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.activity-item,
+.activity-empty {
+
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    background: var(--color-page-background);
+
+    color: var(--color-text-primary);
+
+    font-size: 14px;
+}
+
+.activity-empty {
+
+    color: var(--color-text-secondary);
+
+    text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px) {
+
+    .sidebar {
+
+        position: fixed;
+
+        left: -260px;
+
+        top: 0;
+
+        height: 100%;
+
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+
+        left: 0;
+    }
+
+    #menuBtn {
+
+        display: block;
+
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .menu li {
+
+        padding: 14px 20px;
+    }
+
+    .main {
+
+        padding: 20px;
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -25,7 +25,7 @@ var lblLoginSubtitle = document.getElementById("loginSubtitle");
    Page Text
 
    Title / subtitle now come from AppConfig.TEXT instead of
-   being hardcoded in login.html.
+   being hardcoded in index.html (the login page, renamed from login.html).
    ========================================================== */
 
 lblLoginTitle.textContent = AppConfig.TEXT.login.title;

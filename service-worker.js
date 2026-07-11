@@ -4,7 +4,7 @@ const FILES_TO_CACHE = [
 
     "/",
 
-    "/html/login.html",
+    "/html/index.html",
 
     "/html/dashboard.html",
 
