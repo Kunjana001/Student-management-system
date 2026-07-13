@@ -78,7 +78,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<link rel="manifest" href="../addedFiles/manifest.json">
+	<link rel="manifest" href="manifest.json">
 
     <!-- --------------------------------------------------------
          CONNECTION FIX (mobile): this page had no viewport meta
@@ -93,7 +93,7 @@
 
     <meta name="theme-color" content="#123b8d">
 
-    <link rel="stylesheet" href="../addedFiles/common/common.css">
+    <link rel="stylesheet" href="common.css">
 
     <!-- ------------------------------------------------------------
          Bootstrap and Font Awesome were never linked on this page,
@@ -496,25 +496,25 @@ document.getElementById("btnDashboard").onclick = function () {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 
-<script src="../addedFiles/js/Config.js"></script>
+<script src="Config.js"></script>
 
 <script>
 document.getElementById("pageTitle").textContent = AppConfig.TEXT.student.title;
 </script>
 
-<script src="../addedFiles/js/StorageService.js"></script>
+<script src="StorageService.js"></script>
 
-<script src="../addedFiles/js/DataService.js"></script>
+<script src="DataService.js"></script>
 
-<script src="../addedFiles/common/common.js"></script>
+<script src="common.js"></script>
 
-<script src="../addedFiles/common/theme.js"></script>
+<script src="theme.js"></script>
 
-<script src="../addedFiles/common/navigation.js"></script>
+<script src="navigation.js"></script>
 
-<script src="../addedFiles/common/session.js"></script>
+<script src="session.js"></script>
 
-<script src="../addedFiles/common/register-sw.js"></script>
+<script src="register-sw.js"></script>
 
 <!-- ------------------------------------------------------------
      CONNECTION FIX: this page was missing LegacyCompatShim.js,
@@ -529,7 +529,7 @@ document.getElementById("pageTitle").textContent = AppConfig.TEXT.student.title;
      tag, in the same position, as the other three list pages.
      ------------------------------------------------------------ -->
 
-<script src="../addedFiles/js/LegacyCompatShim.js"></script>
+<script src="LegacyCompatShim.js"></script>
 <!--
      CONNECTION FIX: this page also calls
      CategoryScript.getInstance() and SectionScript.getInstance()
@@ -544,10 +544,10 @@ document.getElementById("pageTitle").textContent = AppConfig.TEXT.student.title;
      CategoryScript.getInstance()/SectionScript.getInstance()), so
      they are safe to include here.
 -->
-<script src="../js/application/Category.script.js"></script>
-<script src="../js/application/Section.script.js"></script>
-<script src="../js/application/Student.script.js"></script>
+<script src="Category.script.js"></script>
+<script src="Section.script.js"></script>
+<script src="Student.script.js"></script>
 
-<script src="../js/application/StudentHTML.script.js"></script>
+<script src="StudentHTML.script.js"></script>
 
 </html>
